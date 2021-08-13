@@ -5,10 +5,10 @@ from zipfile import ZipFile
 import os
 import numpy as np
 
-filedir = 'temp'
-# with ZipFile('alltsv_csvfilesedgelistsandnodelabels.zip', 'r') as zipObj:
-#    # Extract all the contents of zip file in current directory
-#    zipObj.extractall(filedir)
+filedir = 'temp2'
+with ZipFile('alltsv_csvfilesedgelistsandnodelabels.zip', 'r') as zipObj:
+   # Extract all the contents of zip file in current directory
+   zipObj.extractall(filedir)
 
 controlFiles = [];
 pdFiles = [];
@@ -34,7 +34,7 @@ graph_indicator_filename = 'GCN_graph_indicator.txt'
 graph_labels_filename = 'GCN_graph_labels.txt'
 node_labels_filename = 'GCN_node_labels.txt'
 
-node_label_list_df = pd.read_csv(filedir + '/' + 'node labels.txt',header=None)
+node_label_list_df = pd.read_csv('node labels.txt',header=None)
 
 node_list = []
 
